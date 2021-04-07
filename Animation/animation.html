@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+  <head>
+
+    <meta charset="utf-8">
+
+    <title>Animation</title>
+
+  </head>
+
+  <body>
+
+    <script type="text/javascript">
+
+      function moveitBy(obj, x, y){
+        obj.style.left=parseInt(obj.style.left)+x+"px";
+        obj.style.top=parseInt(obj.style.top)+y+"px";
+      }
+
+      function moveitTo(obj,x,y){
+        obj.style.left=x+"px";
+        obj.style.top=y+"px";
+      }
+    </script>
+
+    <div id="hoverimage" style="position: relative; left: 0; top: 0"><img src="logo2.png">
+    </div>
+
+    <ul>
+      <li><a href="javascript:moveitBy(document.getElementById('hoverimage'), 5, 0)">Move by 5px (right)</a></li>
+      <li><a href="javascript:moveitBy(document.getElementById('hoverimage'), -5, 0)">Move by 5px (left)</a></li>
+      <li><a href="javascript:moveitTo(document.getElementById('hoverimage'), 0, -100)">Move by 100px (top)</a></li>
+      <li><a href="javascript:moveitTo(document.getElementById('hoverimage'), 0, 0)">Move to original position (left)</a></li>
+
+    </ul>
+  </body>
+
+</html>
